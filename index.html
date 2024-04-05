@@ -51,15 +51,45 @@
     </div>
 
     <section>
-        <div class="booking-tab-container">
+        <div class="booking-tab-container">        
+
             <div class="booking-tab">
-                        <button class="tablinks" onclick="openTab(event, 'allProducts')">
-                            <img src="assets/plane-icon.svg" alt="">All products</button>
-                        <button class="tablinks" onclick="openTab(event, 'hoodies')">Hoodies</button>
-                        <button class="tablinks" onclick="openTab(event, 'sweatshirts')">Sweatshirts</button>
+                <button class="tablinks active" 
+                    onclick="openTab('tab1')" title="Book Flight">
+                    <img src="assets/plane-icon.svg" alt="">Flight
+                </button>
+
+                <button class="tablinks" 
+                    onclick="openTab('tab2')" title="Book Hotel">
+                    <img src="assets/Hotel-icon.svg" alt="">Hotels
+                </button>
+
+                <button class="tablinks" 
+                    onclick="openTab('tab3')" title="Book Cruise">
+                    <img src="assets/Cruise-icon.svg" alt="">Cruise
+                </button>
+
+                <button class="tablinks" 
+                    onclick="openTab('tab4')" title="Book Holidays">
+                    <img src="assets/Holiday-icon.svg" alt="">Holidays
+                </button>
             </div>
 
+            
+
         </div>
+
+        <div id="tab1" class="tabcontent">
+                <h3>Book Flights</h3>
+
+        </div>
+
+        <div id="tab2" class="tabcontent">
+            <h3>Book Hotels</h3>
+
+    </div>
+
+        
         
     </section>
 
