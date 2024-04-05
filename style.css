@@ -1,0 +1,118 @@
+:root {
+    --primary-button: #013463; /* Blue */;
+    --secondary-color: #ED7532;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: #e3e3e3 4px 2px 24px 2px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logo_container img {
+    max-height: 48px;
+    padding-left: 32px;
+}
+
+
+.header-right ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;    
+}
+
+.header-right {
+    display: flex;
+    place-items: center;
+    margin-right: 32px;
+    font-size: 16px;
+}
+
+.header-right li {
+    padding: 16px;
+}
+
+.header-right li a {
+    text-decoration: none;
+    color: black;
+}
+
+.primary-button {    
+    padding: 13px 24px;
+    background-color: var(--primary-button);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 16px;
+    transition: ease-in-out 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #02519b;
+}
+
+
+.secondary-button {    
+    padding: 13px 24px;
+    background-color: none;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+
+.secondary-button:hover {
+    background-color: #ed733218;
+}
+
+
+.hero-image {
+    background-image: url('../assets/Hero-eva-darron-oCdVtGFeDC0-unsplash 1.jpg');
+    margin-bottom: 30px;
+    background-color: #1e1e1e;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 324px;    
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+}
+
+.hero-image h1 {
+    font-size: 75px;
+    z-index: 1;
+}
+
+.hero-image::before {
+    content: ''; /* Add content to the before element */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Set the background color with an opacity of 0.6 */
+  }
+
+
+.booking-tab {
+    background-color: var(--primary-button);
+  }
