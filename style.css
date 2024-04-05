@@ -84,7 +84,6 @@ body {
 
 .hero-image {
     background-image: url('../assets/Hero-eva-darron-oCdVtGFeDC0-unsplash 1.jpg');
-    margin-bottom: 30px;
     background-color: #1e1e1e;
     background-position: center center;
     background-size: cover;
@@ -113,6 +112,16 @@ body {
   }
 
 
-.booking-tab {
+.booking-tab-container {
     background-color: var(--primary-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+
   }
+
+.booking-tab button {
+    background-color: transparent;
+    border: none;
+}
