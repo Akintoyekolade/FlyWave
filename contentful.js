@@ -1,5 +1,4 @@
-// main.js
-var contentful = require('contentful');
+import * as contentful from './node_modules/contentful/dist/contentful.es5.mjs';
 
 // Project Card
 document.addEventListener("DOMContentLoaded", () => {
