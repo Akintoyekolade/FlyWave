@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-color: #ffffff; /* Light mode background color */
+      color: #000000; /* Light mode text color */
+      transition: background-color 0.5s, color 0.5s;
+    }
+    
+    body.dark-mode {
+      background-color: #000000; /* Dark mode background color */
+      color: #ffffff; /* Dark mode text color */
+    }
+
+    button {
+      background-color: #ee6e73; /* Button color */
+      color: #ffffff; /* Button text color */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      margin: 10px;
+      display: none; /* Initially hidden */
+      transition: all 0.3s;
+    }
+
+    input[type="text"].show {
+      display: inline-block; /* Show when .show class is added */
+      width: 200px;
+    }
+
+    input[type="submit"] {
+      padding: 8px 20px;
+      margin: 10px;
+      background-color: #4CAF50; /* Submit button color */
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Simple Landing Page</title>
+</head>
+<body>
+  <h1>Welcome to the Landing Page</h1>
+  <p>This is a simple example of a landing page with light/dark mode toggle button and a search function.</p>
+  <button id="search-toggle" onclick="toggleSearch()">
+    <i class="fas fa-search"></i>
+  </button>
+  <input type="text" id="search-input" placeholder="Enter your search term">
+  <input type="submit" value="Search" style="display: none;">
+  <button id="theme-toggle" onclick="toggleTheme()">
+    <i id="icon" class="fas fa-moon"></i>
+  </button>
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('icon');
+
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      } else {
+        body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+    }
+
+    function toggleSearch() {
+      const searchInput = document.getElementById('search-input');
+      const searchButton = document.getElementById('search-toggle');
+      const searchSubmit = document.querySelector('input[type="submit"]');
+
+      if (searchInput.classList.contains('show')) {
+        searchInput.classList.remove('show');
+        searchSubmit.style.display = "none";
+      } else {
+        searchInput.classList.add('show');
+        searchSubmit.style.display = "inline-block";
+      }
+    }
+
+    function performSearch() {
+      const searchTerm = document.getElementById('search-input').value;
+      // Perform search operation with the searchTerm
+      alert("You searched for: " + searchTerm); // Example: replace with your actual search logic
+      event.preventDefault(); // Prevent the default form submission
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
