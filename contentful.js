@@ -1,5 +1,21 @@
 import * as contentful from './node_modules/contentful/dist/contentful.es5.mjs';
 
+module.exports = {
+  // Other configuration options...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+};
+
+
 // Project Card
 document.addEventListener("DOMContentLoaded", () => {
     const projectCardsContainer = document.getElementById('project-cards');
